@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Namma Shaale Inventory</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="health_overview">Inventory Health Overview</string>
+    <string name="view_asset_directory">View Asset Directory</string>
+    <string name="total_assets">Total Assets</string>
+    <string name="working">Working</string>
+    <string name="needs_repair">Needs Repair</string>
+    <string name="broken_lost">Broken / Lost</string>
+    <string name="pending_repairs">Pending Repairs</string>
+    <string name="health_status">Health Status</string>
+    <string name="asset_mgmt_portal">Asset Management Portal</string>
+    <string name="home">Home</string>
+    <string name="issues">Issues</string>
+    <string name="reports">Reports</string>
+    
+    <!-- Health Check -->
+    <string name="monthly_health_check">Monthly Health Check</string>
+    <string name="search_assets">Search assets...</string>
+    <string name="filter_health_check">Filter Health Check</string>
+    <string name="all_categories">All Categories</string>
+    <string name="all_locations">All Locations</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="mark_all_working">Mark All Remaining as Working</string>
+    <string name="verified">VERIFIED</string>
+    
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="school_information">School Information</string>
+    <string name="school_name">School Name</string>
+    <string name="school_address">School Address</string>
+    <string name="school_code">DISE / School Code</string>
+    <string name="app_appearance">App Appearance</string>
+    <string name="system_default">System Default</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="select_language">Select Language</string>
+    <string name="danger_zone">Danger Zone</string>
+    <string name="reset_inventory">Reset All Inventory Data</string>
+    
+    <!-- Common Actions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="add_asset">Add Asset</string>
+</resources>
