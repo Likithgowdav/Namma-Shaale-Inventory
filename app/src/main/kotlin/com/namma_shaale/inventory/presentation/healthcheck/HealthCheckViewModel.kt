@@ -29,6 +29,7 @@ data class HealthCheckUiState(
     val searchQuery: String = "",
     val categories: List<String> = emptyList(),
     val locations: List<String> = emptyList(),
+    val assetNotes: Map<String, String> = emptyMap(),
     val errorMessage: String? = null
 )
 
@@ -72,6 +73,7 @@ class HealthCheckViewModel @Inject constructor(
     }
 
     fun updateAssetStatus(assetId: String, newStatus: String) {
+        val note = _uiState.value.assetNotes[assetId] ?: ""
         viewModelScope.launch {
             try {
                 val currentState = _uiState.value
@@ -82,7 +84,8 @@ class HealthCheckViewModel @Inject constructor(
                 val healthCheck = HealthCheck(
                     assetId = assetId,
                     status = newStatus,
-                    checkedDate = System.currentTimeMillis()
+                    checkedDate = System.currentTimeMillis(),
+                    notes = note.ifBlank { null }
                 )
                 assetRepository.insertHealthCheck(healthCheck)
 
@@ -146,6 +149,14 @@ class HealthCheckViewModel @Inject constructor(
 
     fun updateSearchQuery(query: String) {
         _uiState.update { it.copy(searchQuery = query) }
+    }
+
+    fun updateAssetNote(assetId: String, note: String) {
+        _uiState.update { state ->
+            val newNotes = state.assetNotes.toMutableMap()
+            newNotes[assetId] = note
+            state.copy(assetNotes = newNotes)
+        }
     }
 
     fun markAllRemainingAsWorking() {

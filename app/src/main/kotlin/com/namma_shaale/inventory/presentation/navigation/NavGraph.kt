@@ -15,6 +15,9 @@ import com.namma_shaale.inventory.presentation.assetlist.AssetListScreen
 import com.namma_shaale.inventory.presentation.settings.SettingsScreen
 import com.namma_shaale.inventory.presentation.auth.LoginScreen
 import com.namma_shaale.inventory.presentation.auth.SignUpScreen
+import com.namma_shaale.inventory.presentation.assethistory.AssetHistoryScreen
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 
 @Composable
 fun NavGraph(
@@ -44,6 +47,13 @@ fun NavGraph(
         }
         composable("health_check") {
             HealthCheckScreen(navController = navController)
+        }
+        composable(
+            route = "asset_history/{assetId}",
+            arguments = listOf(navArgument("assetId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val assetId = backStackEntry.arguments?.getString("assetId") ?: ""
+            AssetHistoryScreen(assetId = assetId, navController = navController)
         }
         composable("issue_repair") {
             IssueRepairScreen(navController = navController)

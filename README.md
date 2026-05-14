@@ -25,6 +25,19 @@
 
 ---
 
+## 🚀 Advanced Features (Next-Gen Inventory)
+
+### 📈 Condition History per Asset [LIVE]
+- **Full Audit Trail**: Track every change in an asset's condition over its entire lifecycle.
+- **Timeline View**: A professional vertical timeline showing exactly when and why an item's status changed.
+- **Remarks & Context**: Capture detailed notes during each health check for better maintenance tracking.
+
+### 🤖 GenAI Condition Suggestion (In-Development)
+- **AI-Powered Audits**: Leveraging on-device Machine Learning (ML Kit) to analyze asset photos.
+- **Automated Grading**: Automatically suggests a "Health Status" (Green/Yellow/Red) based on visual wear and tear, reducing manual data entry errors.
+
+---
+
 ## 🛠️ Technology Stack
 
 - **Language**: Kotlin

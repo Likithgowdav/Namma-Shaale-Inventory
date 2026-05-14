@@ -9,7 +9,7 @@ import com.namma_shaale.inventory.data.local.entities.*
 
 @Database(
     entities = [Asset::class, HealthCheck::class, IssueLog::class, RepairRequest::class, SchoolSettings::class],
-    version = 5,
+    version = 6,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

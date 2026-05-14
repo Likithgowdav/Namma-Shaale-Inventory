@@ -207,9 +207,12 @@ fun HealthCheckScreen(
                 ) {
                     items(filteredAssets) { asset ->
                         val isVerified = uiState.value.checkedAssetIds.contains(asset.assetId)
+                        val note = uiState.value.assetNotes[asset.assetId] ?: ""
                         AssetHealthCheckCard(
                             asset = asset,
                             isVerified = isVerified,
+                            note = note,
+                            onNoteChange = { newNote -> viewModel.updateAssetNote(asset.assetId, newNote) },
                             onGreenClick = { viewModel.updateAssetStatus(asset.assetId, "GREEN") },
                             onYellowClick = { viewModel.updateAssetStatus(asset.assetId, "YELLOW") },
                             onRedClick = { viewModel.updateAssetStatus(asset.assetId, "RED") }
@@ -290,6 +293,8 @@ fun HealthCheckScreen(
 private fun AssetHealthCheckCard(
     asset: Asset,
     isVerified: Boolean,
+    note: String,
+    onNoteChange: (String) -> Unit,
     onGreenClick: () -> Unit,
     onYellowClick: () -> Unit,
     onRedClick: () -> Unit
@@ -379,6 +384,19 @@ private fun AssetHealthCheckCard(
                     )
                 }
             }
+            
+            Spacer(modifier = Modifier.height(12.dp))
+            
+            OutlinedTextField(
+                value = note,
+                onValueChange = onNoteChange,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text("Add remarks (e.g., Screen flickering, dusty)", style = MaterialTheme.typography.bodySmall) },
+                textStyle = MaterialTheme.typography.bodySmall,
+                shape = RoundedCornerShape(8.dp),
+                maxLines = 2,
+                enabled = !isVerified
+            )
             
             Spacer(modifier = Modifier.height(16.dp))
             

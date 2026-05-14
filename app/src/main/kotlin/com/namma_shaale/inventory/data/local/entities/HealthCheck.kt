@@ -30,5 +30,7 @@ data class HealthCheck(
     @ColumnInfo(name = "checked_date")
     val checkedDate: Long = System.currentTimeMillis(),
     @ColumnInfo(name = "notes")
-    val notes: String? = null
+    val notes: String? = null,
+    @ColumnInfo(name = "suggested_by_ai")
+    val suggestedByAI: Boolean = false
 )

@@ -45,6 +45,10 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material.icons.filled.FilterList
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Settings
+import androidx.navigation.NavController
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
@@ -59,13 +63,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.namma_shaale.inventory.data.local.entities.Asset
 import com.namma_shaale.inventory.presentation.components.AppTopBar
 import com.namma_shaale.inventory.presentation.settings.SettingsViewModel
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.LocationOn
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -190,6 +191,7 @@ fun AssetListScreen(
                         items(uiState.value.filteredAssets) { asset ->
                             AssetDirectoryCard(
                                 asset = asset,
+                                navController = navController,
                                 onDeleteClick = { viewModel.deleteAsset(asset) },
                                 onEditClick = { editingAsset = asset }
                             )
@@ -282,6 +284,7 @@ fun AssetListScreen(
 @Composable
 fun AssetDirectoryCard(
     asset: Asset,
+    navController: NavController,
     onDeleteClick: () -> Unit,
     onEditClick: () -> Unit
 ) {
@@ -318,6 +321,9 @@ fun AssetDirectoryCard(
             ) {
                 Text(asset.name, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
                 Row {
+                    IconButton(onClick = { navController.navigate("asset_history/${asset.assetId}") }) {
+                        Icon(Icons.Filled.History, contentDescription = "View History")
+                    }
                     IconButton(onClick = onEditClick) {
                         Icon(Icons.Filled.Edit, contentDescription = "Edit Asset")
                     }
