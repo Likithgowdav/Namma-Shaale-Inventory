@@ -57,23 +57,21 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/login.jpeg" width="45%" />
-  <img src="screenshots/signup.jpeg" width="45%" />
+  <img src="screenshots/login.jpeg" width="30%" />
+  <img src="screenshots/signup.jpeg" width="30%" />
+  <img src="screenshots/addasset.jpeg" width="30%" />
 </p>
 
 <p align="center">
-  <img src="screenshots/dashboard.jpeg" width="45%" />
-  <img src="screenshots/assetdirectory.jpeg" width="45%" />
+  <img src="screenshots/dashboard.jpeg" width="30%" />
+  <img src="screenshots/assetdirectory.jpeg" width="30%" />
+  <img src="screenshots/monthlyhealthcheck.jpeg" width="30%" />
 </p>
 
 <p align="center">
-  <img src="screenshots/monthlyhealthcheck.jpeg" width="45%" />
-  <img src="screenshots/report.jpeg" width="45%" />
-</p>
-
-<p align="center">
-  <img src="screenshots/issuelog.jpeg" width="45%" />
-  <img src="screenshots/repairqueue.jpeg" width="45%" />
+  <img src="screenshots/report.jpeg" width="30%" />
+  <img src="screenshots/issuelog.jpeg" width="30%" />
+  <img src="screenshots/repairqueue.jpeg" width="30%" />
 </p>
 
 ---
