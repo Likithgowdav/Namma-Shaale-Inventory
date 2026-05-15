@@ -1,3 +1,7 @@
+/**
+ * Asset: The core data model representing a school inventory item.
+ * Includes fields for tracking name, category, location, and health status.
+ */
 package com.namma_shaale.inventory.data.local.entities
 
 import androidx.room.ColumnInfo
