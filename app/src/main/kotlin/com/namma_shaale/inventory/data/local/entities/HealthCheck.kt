@@ -1,3 +1,7 @@
+/**
+ * HealthCheck: Represents a single audit event for an asset.
+ * Tracks the date, condition, and optional remarks during a check-up.
+ */
 package com.namma_shaale.inventory.data.local.entities
 
 import androidx.room.ColumnInfo
