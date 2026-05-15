@@ -84,7 +84,7 @@ app/src/main/kotlin/com/namma_shaale/inventory/
 ### 🛠️ Installation & Setup
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/NammaShaaleInventory.git
+   git clone https://github.com/Likithgowdav/Namma-Shaale-Inventory.git
    ```
 2. **Firebase Setup**:
    - Create a project on [Firebase Console](https://console.firebase.google.com/).
@@ -102,8 +102,6 @@ app/src/main/kotlin/com/namma_shaale/inventory/
    ```bash
    ./gradlew installDebug
    ```
-2. Open the project in Android Studio.
-3. Sync Gradle and run the app on an emulator or physical device.
 
 ---
 
