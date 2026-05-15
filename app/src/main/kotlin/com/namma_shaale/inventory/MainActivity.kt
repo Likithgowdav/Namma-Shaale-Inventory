@@ -1,3 +1,7 @@
+/**
+ * MainActivity: The primary entry point for the application.
+ * Bootstraps the Jetpack Compose UI and sets up the Navigation Graph.
+ */
 package com.namma_shaale.inventory
 
 import android.os.Bundle

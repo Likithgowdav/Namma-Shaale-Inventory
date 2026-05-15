@@ -142,4 +142,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-**Developed for Namma Shaale Initiative** 🇮🇳
+**Developed for Namma Shaale Initiative** 🇮🇳  
+*Last Updated: May 2026*

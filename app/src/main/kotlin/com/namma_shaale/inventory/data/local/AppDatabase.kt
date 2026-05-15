@@ -1,3 +1,7 @@
+/**
+ * AppDatabase: The central persistence layer for Namma Shaale Inventory.
+ * Uses Room to manage Assets, Health Checks, and Issue Logs locally.
+ */
 package com.namma_shaale.inventory.data.local
 
 import android.content.Context
